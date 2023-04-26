@@ -152,7 +152,7 @@ const ProductCard = ({ product }) => {
         alignContent='center'>
         <Link
           as={ReactLink}
-          to={`/product${product._id}`}
+          to={`/product/${product._id}`}
           pt='2'
           cursor='pointer'>
           <Box
@@ -193,7 +193,7 @@ const ProductCard = ({ product }) => {
           <Button
             variant='ghost'
             display='flex'
-            disabled={product.stock <= 0}
+            isDisabled={product.stock <= 0}
             onClick={() => addItem(product._id)}>
             <Icon
               as={FiShoppingCart}
